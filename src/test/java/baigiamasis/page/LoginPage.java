@@ -64,4 +64,41 @@ public class LoginPage {
                 Locators.Login.paragraphLogofMessage
         );
     }
+
+    public static void clickButtonKeistiPaskyrosInformcija() {
+        Common.clickElement(
+                Locators.Login.buttonChangeProfileInformation
+        );
+    }
+
+    public static void enterVardas(String name) {
+        Common.sendKeysToElement(
+                Locators.Login.inputName, name
+        );
+    }
+
+    public static String readMessageOfNameChanged() {
+        return Common.getTextFromElement(
+                Locators.Login.paragraphChangesMessage
+        );
+    }
+
+
+    public static void clickButtonTesti() {
+        Common.clickElement(
+                Locators.Login.buttonInputSubmit
+        );
+    }
+
+    public static void selectAllTextFromField() {
+        Common.selectAllText(
+                Locators.Login.inputName
+        );
+    }
+
+    public static void clickOnVardasField() {
+        Common.clickElement(
+                Locators.Login.inputName
+        );
+    }
 }

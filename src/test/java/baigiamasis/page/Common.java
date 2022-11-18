@@ -2,6 +2,7 @@ package baigiamasis.page;
 
 import baigiamasis.utils.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -30,10 +31,6 @@ public class Common {
         getElement(locator).sendKeys(keys);
     }
 
-    private static List<WebElement> getElements(By locator) {
-        return Driver.getDriver().findElements(locator);
-    }
-
     public static void MoveToButtonLoginByAction(By locator) {
         WebElement element = getElement(locator);
         Actions actions = new Actions(Driver.getDriver());
@@ -44,5 +41,8 @@ public class Common {
         return getElement(locator).getText();
     }
 
-
+    public static void selectAllText(By locator) {
+        Actions action = new Actions(Driver.getDriver());
+        action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
+    }
 }
