@@ -1,4 +1,5 @@
 package baigiamasis.utils;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,7 +20,6 @@ public class Driver {
         WebDriverManager.chromedriver().setup();
         threads.set(new ChromeDriver(getOptions()));
         threads.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
-
     }
 
     private static ChromeOptions getOptions() {

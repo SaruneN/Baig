@@ -4,10 +4,7 @@ import baigiamasis.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.List;
 
 public class Common {
@@ -36,11 +33,10 @@ public class Common {
         return Driver.getDriver().findElements(locator);
     }
 
-    public static void clickButtonLoginByAction(By locator) {
+    public static void MoveToButtonLoginByAction(By locator) {
         WebElement element = getElement(locator);
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
-
     }
 
     public static String getTextFromElement(By locator) {

@@ -29,13 +29,13 @@ public class LoginPage {
         );
     }
 
-    public static void clickButtonUserLoginByAction() {
-        Common.clickButtonLoginByAction(
+    public static void moveToButtonUserLoginByAction() {
+        Common.MoveToButtonLoginByAction(
                 Locators.Login.menuUserLogin
         );
     }
 
-    public static void clickButtonLogin() {
+    public static void clickButtonLoginByAction() {
         Common.clickElement(
                 Locators.Login.buttonLogin
         );
@@ -44,6 +44,24 @@ public class LoginPage {
     public static String readMessageOfLogin() {
         return Common.getTextFromElement(
                 Locators.Login.paragraphLoginMessage
+        );
+    }
+
+    public static void moveToButtonUserByAction() {
+        Common.MoveToButtonLoginByAction(
+                Locators.Login.menuUser
+        );
+    }
+
+    public static void clickButtonAtsijungtiByAction() {
+        Common.clickElement(
+                Locators.Login.buttonLogout
+        );
+    }
+
+    public static String readMessageOfLogof() {
+        return Common.getTextFromElement(
+                Locators.Login.paragraphLogofMessage
         );
     }
 }

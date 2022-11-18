@@ -1,7 +1,6 @@
 package baigiamasis.tests;
 
 import baigiamasis.page.HomePage;
-import baigiamasis.page.Locators;
 import baigiamasis.page.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -25,12 +24,33 @@ public class LoginTest extends TestBase {
         String actualResult;
 
 
-        LoginPage.clickButtonUserLoginByAction();
-        LoginPage.clickButtonLogin();
+        LoginPage.moveToButtonUserLoginByAction();
+        LoginPage.clickButtonLoginByAction();
         LoginPage.enterElPastas(email);
         LoginPage.enterSlaptazodis(password);
         LoginPage.clickButtonPrisijungti();
         actualResult = LoginPage.readMessageOfLogin();
+
+        Assert.assertTrue(
+                actualResult.contains(expectedResult),
+                String.format("Actual: %s, Expected: %s", actualResult, expectedResult)
+        );
+    }
+    @Test
+    public void testLogout (){
+        String email = "testas.vcs@gmail.com";
+        String password = "VCSTestas";
+        String expectedResult = "ATSIJUNGIMAS";
+        String actualResult;
+
+        LoginPage.moveToButtonUserLoginByAction();
+        LoginPage.clickButtonLoginByAction();
+        LoginPage.enterElPastas(email);
+        LoginPage.enterSlaptazodis(password);
+        LoginPage.clickButtonPrisijungti();
+        LoginPage.moveToButtonUserByAction();
+        LoginPage.clickButtonAtsijungtiByAction();
+        actualResult = LoginPage.readMessageOfLogof();
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),
