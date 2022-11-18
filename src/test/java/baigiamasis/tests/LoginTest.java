@@ -11,7 +11,7 @@ public class LoginTest extends TestBase {
     @Override
     public void setUp() {
         LoginPage.openUrl("https://www.technitis.lt/");
-        HomePage.clickElementsFromMenu();
+        HomePage.clickIrankiaiFromMenu();
 
     }
 

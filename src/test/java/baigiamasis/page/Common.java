@@ -4,6 +4,7 @@ import baigiamasis.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
@@ -42,4 +43,7 @@ public class Common {
     public static String getTextFromElement(By locator) {
         return getElement(locator).getText();
     }
+
+
+
 }
