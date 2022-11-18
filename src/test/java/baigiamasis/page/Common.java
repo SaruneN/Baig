@@ -45,4 +45,10 @@ public class Common {
         Actions action = new Actions(Driver.getDriver());
         action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
     }
+
+    public static String getAttributeValue(By locator) {
+        WebElement element = getElement(locator);
+        return element.getAttribute("value");
+
+    }
 }

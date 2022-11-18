@@ -1,6 +1,8 @@
 package baigiamasis.page;
 
 
+import java.sql.SQLOutput;
+
 public class LoginPage {
 
     public static void openUrl(String url) {
@@ -71,10 +73,20 @@ public class LoginPage {
         );
     }
 
-    public static void enterVardas(String name) {
-        Common.sendKeysToElement(
-                Locators.Login.inputName, name
-        );
+    public static void enterVardas(String inputText) {
+        String vardas = Common.getAttributeValue(Locators.Login.inputName);
+        String vardasAntras = "Testukas";
+        if (vardas.equals(inputText)) {
+            Common.sendKeysToElement(
+                    Locators.Login.inputName, vardasAntras
+            );
+        } else {
+            Common.sendKeysToElement(
+                    Locators.Login.inputName, inputText
+            );
+        }
+
+
     }
 
     public static String readMessageOfNameChanged() {
