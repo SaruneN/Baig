@@ -35,4 +35,10 @@ public class Locators {
         public static By buttonAddToCart = By.xpath("//button[@id='button-cart']");
         public static By messageAddToCart = By.xpath("//div[@id='swal2-content']");
     }
+
+    public static class SearchBar {
+        public static By searchBar = By.xpath("//input[@name='search']");
+        public static By buttonSearch = By.xpath("//button[@class='searchbtn btn btn-default btn-lg']");
+        public static By messageOfSearchResult = By.xpath("//div[@class='caption']");
+    }
 }
