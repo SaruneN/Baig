@@ -4,6 +4,7 @@ import baigiamasis.page.HomePage;
 import baigiamasis.page.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class LoginTest extends TestBase {
@@ -14,13 +15,17 @@ public class LoginTest extends TestBase {
         HomePage.clickIrankiaiFromMenu();
     }
 
-    @Test
-    public void testLogin (){
-        String email = "testas.vcs@gmail.com";
-        String password = "VCSTestas";
-        String expectedResult = "PASKYRA";
-        String actualResult;
+    @DataProvider(name= "LoginDataProvider")
 
+    public  Object[][] dataProviderLogin(){
+        return new Object[][]{
+                {"testas.vcs@gmail.com", "VCSTestas", "PASKYRA"}
+        };
+    }
+
+    @Test(dataProvider = "LoginDataProvider")
+    public void testLogin (String email, String password, String expectedResult){
+        String actualResult;
 
         LoginPage.moveToButtonUserLoginByAction();
         LoginPage.clickButtonLoginByAction();
@@ -35,11 +40,16 @@ public class LoginTest extends TestBase {
         );
     }
 
-    @Test
-    public void testLogout (){
-        String email = "testas.vcs@gmail.com";
-        String password = "VCSTestas";
-        String expectedResult = "ATSIJUNGIMAS";
+    @DataProvider(name= "LogofDataProvider")
+
+    public  Object[][] dataProviderLogof(){
+        return new Object[][]{
+                {"testas.vcs@gmail.com", "VCSTestas", "ATSIJUNGIMAS"}
+        };
+    }
+
+    @Test(dataProvider = "LogofDataProvider")
+    public void testLogout (String email, String password, String expectedResult){
         String actualResult;
 
         LoginPage.moveToButtonUserLoginByAction();
@@ -57,12 +67,17 @@ public class LoginTest extends TestBase {
         );
     }
 
-    @Test
-    public void testChangeNameInPersonalInformation(){
-        String email = "testas.vcs@gmail.com";
-        String password = "VCSTestas";
-        String inputText = "Testas";
-        String expectedResult = "sėkmingai";
+    @DataProvider(name= "ChangeNameInPersonalInformationLogofDataProvider")
+
+    public  Object[][] dataProviderChangeNameInPersonalInformationLogof(){
+        return new Object[][]{
+                {"testas.vcs@gmail.com", "VCSTestas", "Testas", "sėkmingai"}
+        };
+    }
+
+    @Test(dataProvider = "ChangeNameInPersonalInformationLogofDataProvider")
+    public void testChangeNameInPersonalInformation(
+            String email, String password, String inputText, String expectedResult ){
         String actualResult;
 
         LoginPage.moveToButtonUserLoginByAction();

@@ -95,7 +95,6 @@ public class LoginPage {
         );
     }
 
-
     public static void clickButtonTesti() {
         Common.clickElement(
                 Locators.Login.buttonInputSubmit

@@ -8,10 +8,12 @@ public class Locators {
         public static By MenuAkumuliatoriniaiSuktuvai =
                 By.xpath("//div[@class='category-thumb transition']//*[text()='Akumuliatoriniai suktuvai']");
     }
+
     public static class Irankiai {
         public static By MenuAkumuliatoriniaiIrankiai =
                 By.xpath("//div[@class='list-group']//*[text()='Akumuliatoriniai įrankiai']");
     }
+
     public static class Home {
         public static By MenuIrankiai = By.xpath("//*[text()='Įrankiai']");
     }

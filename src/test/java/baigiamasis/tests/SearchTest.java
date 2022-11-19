@@ -4,9 +4,10 @@ import baigiamasis.page.*;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class SearchTest extends TestBase{
+public class SearchTest extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() {
@@ -16,11 +17,17 @@ public class SearchTest extends TestBase{
         AkumuliatoriniaiIrankiaiPage.clickAkumuliatoriniaiSuktuvaiFromMenu();
     }
 
-    @Test
-    public void testSearchBar() {
-        String expectedResult = "SOLO";
+    @DataProvider(name = "SearchBarDataProvider")
+
+    public Object[][] dataProviderSearchBar() {
+        return new Object[][]{
+                {"SOLO", "SOLO"}
+        };
+    }
+
+    @Test(dataProvider = "SearchBarDataProvider")
+    public void testSearchBar(String inputItemName, String expectedResult) {
         String actualResult;
-        String inputItemName = "SOLO";
 
         SearchBarPage.clickOnSearchBar();
         SearchBarPage.enterItemName(inputItemName);

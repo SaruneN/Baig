@@ -3,6 +3,7 @@ package baigiamasis.tests;
 import baigiamasis.page.*;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class AddToCartTest extends TestBase{
@@ -15,9 +16,15 @@ public class AddToCartTest extends TestBase{
         AkumuliatoriniaiIrankiaiPage.clickAkumuliatoriniaiSuktuvaiFromMenu();
     }
 
-    @Test
-    public void testAddToCart(){
-        String expectedResult = "Pavyko";
+    @DataProvider(name = "AddToCartDataProvider")
+
+    public Object[][] dataProviderAddToCart() {
+        return new Object[][]{
+                {"Pavyko"}
+        };
+    }
+    @Test(dataProvider = "AddToCartDataProvider")
+    public void testAddToCart(String expectedResult){
         String actualResult;
 
         AddToCartPage.clickCheckBoxManufacturer();
