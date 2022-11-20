@@ -39,14 +39,14 @@ public class LoginTest extends TestBase {
         );
     }
 
-    @DataProvider(name= "testLogout")
+    @DataProvider(name= "LogoutDataProvider")
     public  Object[][] dataProviderLogout(){
         return new Object[][]{
                 {"testas.vcs@gmail.com", "VCSTestas", "ATSIJUNGIMAS"}
         };
     }
 
-    @Test(dataProvider = "LogofDataProvider")
+    @Test(dataProvider = "LogoutDataProvider")
     public void testLogout (String email, String password, String expectedResult){
         String actualResult;
 
@@ -72,7 +72,7 @@ public class LoginTest extends TestBase {
         };
     }
 
-    @Test(dataProvider = "dataProviderChangeNameInPersonalInformation")
+    @Test(dataProvider = "ChangeNameInPersonalInformationDataProvider")
     public void testChangeNameInPersonalInformation(
             String email, String password, String inputText, String expectedResult ){
         String actualResult;
