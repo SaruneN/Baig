@@ -26,7 +26,7 @@ public class Locators {
         public static By paragraphLoginMessage = By.xpath("//h1[text()='Mano paskyra']");
         public static By menuUser = By.xpath("//li[@id='usercont']");
         public static By buttonLogout = By.xpath("//button[@class='last']");
-        public static By paragraphLogofMessage = By.xpath("//div[@id='content']");
+        public static By paragraphLogoutMessage = By.xpath("//div[@id='content']");
         public static By buttonChangeProfileInformation =
                 By.xpath("//a[text()='Keisti paskyros informaciją']");
         public static By inputName = By.xpath("//input[@name='firstname']");

@@ -39,8 +39,8 @@ public class LoginTest extends TestBase {
         );
     }
 
-    @DataProvider(name= "LogofDataProvider")
-    public  Object[][] dataProviderLogof(){
+    @DataProvider(name= "testLogout")
+    public  Object[][] dataProviderLogout(){
         return new Object[][]{
                 {"testas.vcs@gmail.com", "VCSTestas", "ATSIJUNGIMAS"}
         };
@@ -57,7 +57,7 @@ public class LoginTest extends TestBase {
         LoginPage.clickButtonPrisijungti();
         LoginPage.moveToButtonUserByAction();
         LoginPage.clickButtonAtsijungtiByAction();
-        actualResult = LoginPage.readMessageOfLogof();
+        actualResult = LoginPage.readMessageOfLogout();
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),
@@ -65,14 +65,14 @@ public class LoginTest extends TestBase {
         );
     }
 
-    @DataProvider(name= "ChangeNameInPersonalInformationLogofDataProvider")
-    public  Object[][] dataProviderChangeNameInPersonalInformationLogof(){
+    @DataProvider(name= "ChangeNameInPersonalInformationDataProvider")
+    public  Object[][] dataProviderChangeNameInPersonalInformation(){
         return new Object[][]{
                 {"testas.vcs@gmail.com", "VCSTestas", "Testas", "sėkmingai"}
         };
     }
 
-    @Test(dataProvider = "ChangeNameInPersonalInformationLogofDataProvider")
+    @Test(dataProvider = "dataProviderChangeNameInPersonalInformation")
     public void testChangeNameInPersonalInformation(
             String email, String password, String inputText, String expectedResult ){
         String actualResult;

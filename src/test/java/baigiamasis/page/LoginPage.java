@@ -57,9 +57,9 @@ public class LoginPage {
         );
     }
 
-    public static String readMessageOfLogof() {
+    public static String readMessageOfLogout() {
         return Common.getTextFromElement(
-                Locators.Login.paragraphLogofMessage
+                Locators.Login.paragraphLogoutMessage
         );
     }
 
