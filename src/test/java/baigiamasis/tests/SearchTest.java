@@ -13,7 +13,6 @@ public class SearchTest extends TestBase {
         LoginPage.openUrl("https://www.technitis.lt/");
         HomePage.clickIrankiaiFromMenu();
         IrankiaiPage.clickAkumuliatoriniaiIrankiaiFromMenu();
-        AkumuliatoriniaiIrankiaiPage.clickAkumuliatoriniaiSuktuvaiFromMenu();
     }
 
     @DataProvider(name = "SearchBarDataProvider")
