@@ -18,11 +18,6 @@ public class TestListener implements ITestListener {
         takescreenshot("failure");
     }
 
-    @Override
-    public void onTestSuccess(ITestResult result) {
-        takescreenshot("success");
-    }
-
     private void takescreenshot(String status) {
 
         try {
