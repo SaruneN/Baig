@@ -3,10 +3,9 @@ package baigiamasis.page;
 import org.openqa.selenium.By;
 
 public class Locators {
-
     public static class AkumuliatoriniaiIrankiai {
         public static By MenuAkumuliatoriniaiSuktuvai =
-                By.xpath("//div[@class='category-thumb transition']//*[text()='Akumuliatoriniai suktuvai']");
+                By.xpath("//div[@class='subcategory']//*[text()='Akumuliatoriniai suktuvai']");
     }
 
     public static class Irankiai {
@@ -34,7 +33,6 @@ public class Locators {
         public static By paragraphChangesMessage = By.xpath("//div[@id='swal2-content']");
         public static By buttonInputSubmit = By.xpath("//input[@type='submit']");
     }
-
 
     public static class AddToCart {
         public static By checkBoxManufactorer = By.xpath("//*[text()='BOSCH ']");

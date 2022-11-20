@@ -16,7 +16,6 @@ public class LoginTest extends TestBase {
     }
 
     @DataProvider(name= "LoginDataProvider")
-
     public  Object[][] dataProviderLogin(){
         return new Object[][]{
                 {"testas.vcs@gmail.com", "VCSTestas", "PASKYRA"}
@@ -41,7 +40,6 @@ public class LoginTest extends TestBase {
     }
 
     @DataProvider(name= "LogofDataProvider")
-
     public  Object[][] dataProviderLogof(){
         return new Object[][]{
                 {"testas.vcs@gmail.com", "VCSTestas", "ATSIJUNGIMAS"}
@@ -68,7 +66,6 @@ public class LoginTest extends TestBase {
     }
 
     @DataProvider(name= "ChangeNameInPersonalInformationLogofDataProvider")
-
     public  Object[][] dataProviderChangeNameInPersonalInformationLogof(){
         return new Object[][]{
                 {"testas.vcs@gmail.com", "VCSTestas", "Testas", "sėkmingai"}

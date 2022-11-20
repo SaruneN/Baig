@@ -8,8 +8,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 
 public class Driver {
-
-
     private static ThreadLocal<WebDriver> threads = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
@@ -26,8 +24,7 @@ public class Driver {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("window-size=2000,3000");
         options.addArguments("--force-device-scale-factor=0.85");
-//       options.addArguments("--incognito");
-//       options.addArguments("--headless");
+
         return options;
     }
 

@@ -1,6 +1,5 @@
 package baigiamasis.utils;
 
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -34,16 +33,13 @@ public class TestListener implements ITestListener {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH_mm_ss_SSS");
             String dateAndTime = localDateTime.format(formatter);
 
-
             String directory = "./screenshots/";
             String fileName = status + "_screenshot_" + dateAndTime + UUID.randomUUID() + ".png";
-
 
             File screenshotFile = new File(directory + fileName);
             FileUtils.copyFile(screenshotRaw, screenshotFile);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

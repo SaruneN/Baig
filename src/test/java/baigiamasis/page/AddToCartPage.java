@@ -1,8 +1,6 @@
 package baigiamasis.page;
 
 public class AddToCartPage {
-
-
     public static void clickCheckBoxManufacturer() {
         Common.clickElement(Locators.AddToCart.checkBoxManufactorer);
     }

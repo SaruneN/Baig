@@ -6,8 +6,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import java.util.List;
-
 public class Common {
     public static void openUrl(String url) {
         Driver.setDriver();
@@ -40,7 +38,7 @@ public class Common {
         return getElement(locator).getText();
     }
 
-    public static void selectAllText(By locator) {
+    public static void selectAllText() {
         Actions action = new Actions(Driver.getDriver());
         action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
     }
@@ -48,6 +46,5 @@ public class Common {
     public static String getAttributeValue(By locator) {
         WebElement element = getElement(locator);
         return element.getAttribute("value");
-
     }
 }

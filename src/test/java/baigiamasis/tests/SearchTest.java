@@ -1,7 +1,6 @@
 package baigiamasis.tests;
 
 import baigiamasis.page.*;
-import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -18,7 +17,6 @@ public class SearchTest extends TestBase {
     }
 
     @DataProvider(name = "SearchBarDataProvider")
-
     public Object[][] dataProviderSearchBar() {
         return new Object[][]{
                 {"SOLO", "SOLO"}

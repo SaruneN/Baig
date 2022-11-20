@@ -1,7 +1,5 @@
 package baigiamasis.page;
 
-import java.util.concurrent.ConcurrentMap;
-
 public class SearchBarPage {
     public static void clickOnSearchBar() {
         Common.clickElement(
@@ -14,7 +12,6 @@ public class SearchBarPage {
                 Locators.SearchBar.searchBar, name
         );
     }
-
 
     public static void clickButtonSearch() {
         Common.clickElement(

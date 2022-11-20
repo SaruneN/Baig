@@ -17,7 +17,6 @@ public class AddToCartTest extends TestBase{
     }
 
     @DataProvider(name = "AddToCartDataProvider")
-
     public Object[][] dataProviderAddToCart() {
         return new Object[][]{
                 {"Pavyko"}
