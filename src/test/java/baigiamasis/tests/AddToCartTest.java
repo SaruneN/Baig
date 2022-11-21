@@ -10,8 +10,7 @@ public class AddToCartTest extends TestBase{
     @BeforeMethod
     @Override
     public void setUp() {
-        LoginPage.openUrl("https://www.technitis.lt/");
-        HomePage.clickIrankiaiFromMenu();
+        super.setUp();
         IrankiaiPage.clickAkumuliatoriniaiIrankiaiFromMenu();
         AkumuliatoriniaiIrankiaiPage.clickAkumuliatoriniaiSuktuvaiFromMenu();
     }

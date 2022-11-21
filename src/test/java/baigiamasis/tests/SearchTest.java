@@ -10,8 +10,7 @@ public class SearchTest extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() {
-        LoginPage.openUrl("https://www.technitis.lt/");
-        HomePage.clickIrankiaiFromMenu();
+        super.setUp();
         IrankiaiPage.clickAkumuliatoriniaiIrankiaiFromMenu();
     }
 
