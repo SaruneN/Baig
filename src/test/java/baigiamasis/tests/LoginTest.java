@@ -1,6 +1,5 @@
 package baigiamasis.tests;
 
-import baigiamasis.page.HomePage;
 import baigiamasis.page.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
