@@ -3,16 +3,6 @@ package baigiamasis.page;
 import org.openqa.selenium.By;
 
 public class Locators {
-    public static class AkumuliatoriniaiIrankiai {
-        public static By MenuAkumuliatoriniaiSuktuvai =
-                By.xpath("//div[@class='subcategory']//*[text()='Akumuliatoriniai suktuvai']");
-    }
-
-    public static class Irankiai {
-        public static By MenuAkumuliatoriniaiIrankiai =
-                By.xpath("//div[@class='list-group']//*[text()='Akumuliatoriniai įrankiai']");
-    }
-
     public static class Home {
         public static By MenuIrankiai = By.xpath("//*[text()='Įrankiai']");
     }
@@ -32,6 +22,16 @@ public class Locators {
         public static By inputName = By.xpath("//input[@name='firstname']");
         public static By paragraphChangesMessage = By.xpath("//div[@id='swal2-content']");
         public static By buttonInputSubmit = By.xpath("//input[@type='submit']");
+    }
+
+    public static class AkumuliatoriniaiIrankiai {
+        public static By MenuAkumuliatoriniaiSuktuvai =
+                By.xpath("//div[@class='subcategory']//*[text()='Akumuliatoriniai suktuvai']");
+    }
+
+    public static class Irankiai {
+        public static By MenuAkumuliatoriniaiIrankiai =
+                By.xpath("//div[@class='list-group']//*[text()='Akumuliatoriniai įrankiai']");
     }
 
     public static class AddToCart {
